@@ -45,6 +45,9 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '本週餐點口味統計'
+        },
         tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c} ({d}%)'
@@ -52,21 +55,22 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['Industries', 'Technology', 'Forex', 'Gold', 'Forecasts']
+          data: ['雙拼', '卡拉雞腿排飯', '迷迭香烤豬飯', '玫瑰油雞飯', '香蒜烤雞飯', '其他']
         },
         series: [
           {
-            name: 'WEEKLY WRITE ARTICLES',
+            name: '',
             type: 'pie',
-            roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
+            radius: '55%',
+            center: ['40%', '50%'],
             data: [
-              { value: 320, name: 'Industries' },
-              { value: 240, name: 'Technology' },
-              { value: 149, name: 'Forex' },
-              { value: 100, name: 'Gold' },
-              { value: 59, name: 'Forecasts' }
+              { value: 551, name: '雙拼' },
+              { value: 459, name: '卡拉雞腿排飯' },
+              { value: 451, name: '迷迭香烤豬飯' },
+              { value: 411, name: '玫瑰油雞飯' },
+              { value: 147, name: '香蒜烤雞飯' },
+              { value: 153, name: '味噌燒肉飯' },
+              { value: 246, name: '其他' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

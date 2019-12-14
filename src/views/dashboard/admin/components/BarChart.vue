@@ -47,6 +47,9 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '本週主力餐點瀏覽次數'
+        },
         tooltip: {
           trigger: 'axis',
           axisPointer: { // 坐标轴指示器，坐标轴触发有效
@@ -54,7 +57,7 @@ export default {
           }
         },
         grid: {
-          top: 10,
+          top: 50,
           left: '2%',
           right: '2%',
           bottom: '3%',
@@ -62,7 +65,7 @@ export default {
         },
         xAxis: [{
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['雙拼', '卡拉雞腿排飯', '迷迭香烤豬飯', '玫瑰油雞飯', '其他'],
           axisTick: {
             alignWithLabel: true
           }
@@ -74,25 +77,18 @@ export default {
           }
         }],
         series: [{
-          name: 'pageA',
+          name: '晚餐',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [79, 52, 200, 334, 390, 330, 220],
+          data: [259, 315, 164, 92, 129],
           animationDuration
         }, {
-          name: 'pageB',
+          name: '午餐',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [80, 52, 200, 334, 390, 330, 220],
-          animationDuration
-        }, {
-          name: 'pageC',
-          type: 'bar',
-          stack: 'vistors',
-          barWidth: '60%',
-          data: [30, 52, 200, 334, 390, 330, 220],
+          data: [200, 136, 247, 55, 117],
           animationDuration
         }]
       })

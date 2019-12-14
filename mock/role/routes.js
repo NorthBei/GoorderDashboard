@@ -66,7 +66,7 @@ export const constantRoutes = [
         path: 'index',
         component: 'views/guide/index',
         name: 'Guide',
-        meta: { title: 'Guide', icon: 'guide', noCache: true }
+        meta: { title: '導覽', icon: 'guide', noCache: true }
       }
     ]
   }
